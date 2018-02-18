@@ -11,8 +11,7 @@
   display: block;
   pointer-events: none;
   margin: 2em 0;
-  height: 50vh;
-  width: 100%;
+  max-height: 50vh;
 
   &.height {
     max-height: 26em;

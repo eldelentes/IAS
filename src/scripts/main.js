@@ -13,18 +13,16 @@ var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
 
 
 function playChart() {
+  // if ($('.swiper-slide-active .chart').length > 0) {
+  //   var chart = $('.swiper-slide-active .chart')[0];
+  //   chart.pause();
+  //   chart.currentTime = 0;
+  //   chart.play();
+  // }
+
   if ($('.swiper-slide-active .chart').length > 0) {
     var chart = $('.swiper-slide-active .chart')[0];
-    chart.pause();
-    chart.currentTime = 0;
-    chart.play();
-  }
-
-  if ($('.swiper-slide-active .gif').length > 0) {
-    var gif = $('.swiper-slide-active .gif');
-    var src = gif.attr('src');
-    console.log(src);
-    gif.attr('src', src);
+    chart.src = chart.src.replace(/\?.*$/,"")+"?x="+Math.random();
   }
 };
 
